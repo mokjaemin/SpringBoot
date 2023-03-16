@@ -17,16 +17,29 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.0'
 	
-	// 서버 : 톰캣 라이브러리 설치
+	
+	//thymeleaf 
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+    
+	// 서버 관련
 	implementation('org.apache.tomcat.embed:tomcat-embed-jasper')
-	// jsp 사용을 위한 라이브러리 설치
-    implementation('javax.servlet:jstl:1.2')
-    // 오라클 사용을 위한 라이브러리 설치, 로컬에서 찾는 설정임
+	
+	// jsp 관련
+	implementation('javax.servlet:jstl:1.2')
+    
+    
+    // oracle 관련
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation files('libs/ojdbc6.jar')
     
+    
+    // implementation('org.apache.tiles:tiles-jsp:3.0.4')
+    
+    
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 }
 
 tasks.named('test') {

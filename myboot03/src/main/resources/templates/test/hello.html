@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!-- 타임리프 기능을 사용하기 위해 선언 -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<!-- 스크립트 지정, base폴더는 항상 static 폴더 -->
+   <script src="/js/scriptTest.js" type="js/javascript"></script>
+   <meta charset="utf-8"  />
+   <title>hello.html입니다.</title>
+</head>
+<body>
+   <h1> thymeleaf 테스트입니다.</h1>
+   <div th:text="${message}"></div>
+   <img   src="/image/duke3.png" width="200" height="200" /><br>
+   <input type="button" name="테스트" value="테스트" onClick="test()" />
+</body>
