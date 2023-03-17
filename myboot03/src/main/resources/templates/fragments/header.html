@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>헤더</title>
+<body>
+    <th:block th:fragment="headerFragment">
+    <div id="header">
+		<table border=0  width="100%">
+		  <tr>
+		     <td>
+		     	<a  th:href="@{/member/main.do}">
+					<!-- <img th:src="${/image/duke_swing.gif}"  /> -->
+				</a>
+		     </td>
+		     <td>
+		       <h1><font size=30>스프링실습 홈페이지!!</font></h1>
+		     </td>
+		     <td th:if="${isLogOn == true && member != null}">
+		         <h3>환영합니다. ${member.name }님!</h3>
+		         <a th:href="@{/member/logout.do}"><h3>로그아웃</h3></a>
+		     </td>
+		     <td th:unless="${isLogOn == true && member != null}">
+			     <a th:href="@{/member/loginForm.do}"><h3>로그인</h3></a>
+		     </td>
+		  </tr>
+		</table>
+	</div>
+	</th:block>
+</body>
+
+</html>

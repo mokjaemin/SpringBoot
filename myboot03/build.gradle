@@ -20,7 +20,10 @@ dependencies {
 	
 	//thymeleaf 
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    
+    //thymeleaf Layout(=tiles) 관련
     implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+    // implementation group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '2.5.3'
     
 	// 서버 관련
 	implementation('org.apache.tomcat.embed:tomcat-embed-jasper')
@@ -33,7 +36,7 @@ dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation files('libs/ojdbc6.jar')
     
-    
+    // 타일즈 - jsp 관련
     // implementation('org.apache.tiles:tiles-jsp:3.0.4')
     
     
