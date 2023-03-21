@@ -1,9 +1,13 @@
 package com.myboot01;
 
+
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @Controller
 public class DemoController {
@@ -15,12 +19,11 @@ public class DemoController {
 		return "Hello Boot";
 	}
 	
-	@RequestMapping("hello.do")
-	public String hello(Model model) {
-		System.out.println("안녕하세요");
-		model.addAttribute("message", "hello.html입니다.");
-		// templates/hello.html에 자동 전달
-		return "hello";
+	@RequestMapping(value= "/hello.do", method = RequestMethod.GET)
+	public ModelAndView listMembers(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		String viewName = (String)request.getAttribute("viewName");
+		ModelAndView mav = new ModelAndView(viewName);
+		return mav;
 	}
 	
 }

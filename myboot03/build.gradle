@@ -13,6 +13,7 @@ repositories {
 }
 
 dependencies {
+
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.0'
@@ -21,12 +22,15 @@ dependencies {
 	//thymeleaf 
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     
+    
     //thymeleaf Layout(=tiles) 관련
     implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
     // implementation group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '2.5.3'
     
+    
 	// 서버 관련
 	implementation('org.apache.tomcat.embed:tomcat-embed-jasper')
+	
 	
 	// jsp 관련
 	implementation('javax.servlet:jstl:1.2')
@@ -35,6 +39,7 @@ dependencies {
     // oracle 관련
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation files('libs/ojdbc6.jar')
+    
     
     // 타일즈 - jsp 관련
     // implementation('org.apache.tiles:tiles-jsp:3.0.4')
