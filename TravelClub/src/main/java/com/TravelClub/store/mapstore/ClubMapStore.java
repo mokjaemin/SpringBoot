@@ -1,5 +1,6 @@
 package com.TravelClub.store.mapstore;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,8 @@ public class ClubMapStore implements ClubStore{
 	@Override
 	public List<TravelClub> retrieveByName(String name) {
 		// 이름에 맞는 클럽을 모두 찾아 리스트로 반환
-		// Stream 사용
+		// Stream 사용		
+		
 		return clubMap.values().stream()
 				.filter(club -> club.getName().equals(name))
 				.collect(Collectors.toList());
@@ -71,6 +73,7 @@ public class ClubMapStore implements ClubStore{
 	@Override
 	public boolean exists(String clubId) {
 		// TODO Auto-generated method stub
+		// clubMap.containsKey(clubId); // 동일
 		return Optional.ofNullable(clubMap.get(clubId)).isPresent();
 	}
 
