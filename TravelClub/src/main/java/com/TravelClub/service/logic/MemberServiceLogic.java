@@ -17,6 +17,8 @@ import com.TravelClub.util.exception.NoSuchMemberException;
 @Service("memberService")
 public class MemberServiceLogic implements MemberService{
 	
+	
+	
 	private MemberStore memberStore;
 	
 	

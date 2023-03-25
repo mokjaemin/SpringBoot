@@ -1,0 +1,7 @@
+
+
+# Spring Boot 실행될때 처리
+
+#Server
+server:
+ port: 8090

@@ -17,21 +17,6 @@ public class TravelClubApplication {
 		
 		SpringApplication.run(TravelClubApplication.class, args);
 		
-//		// xml 파일을 읽음
-//		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-//		String [] beanNames = context.getBeanDefinitionNames();
-//		// System.out.println(Arrays.toString(beanNames));
-//		
-//		
-//		// 클럽 이름, 설명 객체에 담음
-//		TravelClubCdo clubcdo = new TravelClubCdo("TravelClub1", "Test Test Test");
-//		// Bean clubService 빈 받아옴
-//		ClubService clubService = context.getBean("clubService", ClubService.class);
-//		// ClubService의 매서드 이용해 클럽 등록
-//		String clubID = clubService.registerClub(clubcdo);
-//		// 반환된 클럽아이디 출력
-//		System.out.println(clubID);
-		
 	}
 
 }

@@ -27,7 +27,7 @@
 	
 	<dependencies>
 		
-		<!-- spring basic -->
+		<!-- spring web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -40,7 +40,7 @@
 			<scope>provided</scope>
 		</dependency>
 		
-		
+		<!-- Spring Test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -54,6 +54,12 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+        
+        <!-- Json 사용을 위한 Gsoon -->
+        <dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		</dependency>
 		
 	</dependencies>
 
