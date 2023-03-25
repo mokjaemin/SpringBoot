@@ -38,6 +38,12 @@ public class ClubServiceLogic implements ClubService{
 		newClub.checkValidation();
 		return clubStore.create(newClub);
 	}
+	
+	// 클럽 전체 리스트 찾기
+	@Override
+	public List<TravelClub> findAll() {
+		return clubStore.retrieveAll();
+	}
 
 	// 아이디로 클럽찾기
 	@Override
@@ -47,10 +53,11 @@ public class ClubServiceLogic implements ClubService{
 
 	// 이름으로 클럽찾기
 	@Override
-	public List<TravelClub> findClubsByName(String name) {
+	public List<TravelClub> findClubByName(String name) {
 		return clubStore.retrieveByName(name);
 	}
-
+	
+	// 클럽 수정
 	@Override
 	public void modify(String clubId, NameValueList nameValues) {
 		TravelClub foundedClub = clubStore.retrieve(clubId);
@@ -61,6 +68,7 @@ public class ClubServiceLogic implements ClubService{
 		clubStore.update(foundedClub);
 	}
 
+	// 클럽 삭제
 	@Override
 	public void remove(String clubId) {
 		if (!clubStore.exists(clubId)) {

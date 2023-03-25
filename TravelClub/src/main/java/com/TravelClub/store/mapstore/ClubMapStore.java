@@ -33,8 +33,14 @@ public class ClubMapStore implements ClubStore{
 		// 확인으로 클럽아이디 반환
 		return club.getId();
 	}
+	
+	// 모든 클럽 반환
+	public List<TravelClub> retrieveAll() {
+		return clubMap.values().stream()
+				.collect(Collectors.toList());
+	}
 
-	// Club 찾기
+	// 클럽 아이디로 해당 클럽이 있는지 찾기
 	@Override
 	public TravelClub retrieve(String clubId) {
 		// 해당 클럽아이디를 찾아 클럽객체 리턴
