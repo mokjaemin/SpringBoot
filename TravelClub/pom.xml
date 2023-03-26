@@ -34,13 +34,14 @@
 		</dependency>
 
 		<!-- tomcat server -->
+		<!-- 자동 설치 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		
-		<!-- Spring Test -->
+		<!-- TDD 관련 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -56,6 +57,7 @@
         </dependency>
         
         <!-- Json 사용을 위한 Gsoon -->
+        <!-- 객체나 맵 등을 Json으로 바꿔주는 메서드 정의 되어있음 -->
         <dependency>
 		    <groupId>com.google.code.gson</groupId>
 		    <artifactId>gson</artifactId>

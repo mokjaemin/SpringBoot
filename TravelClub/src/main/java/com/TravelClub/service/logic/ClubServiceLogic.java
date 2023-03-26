@@ -29,6 +29,15 @@ public class ClubServiceLogic implements ClubService{
 	 	this.clubStore = clubStore;
 	 }
 	
+	// 테스트 클럽 등록을 위한 메서드
+	 @Override
+		public String registerClubTest(TravelClub travelClub) {
+			// 제한사항 체크
+			travelClub.checkValidation();
+			return clubStore.create(travelClub);
+	}
+		
+	 
 
 	// 클럽 등록
 	@Override

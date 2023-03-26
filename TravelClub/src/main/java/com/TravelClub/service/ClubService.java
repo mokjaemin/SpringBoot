@@ -9,6 +9,7 @@ import java.util.List;
 public interface ClubService {
 	//
 	String registerClub(TravelClubCdo club);
+	String registerClubTest(TravelClub travelClub);
 	TravelClub findClubById(String id);
 	List<TravelClub> findClubByName(String name);
 	List<TravelClub> findAll();
