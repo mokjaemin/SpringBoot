@@ -30,11 +30,18 @@ public class ClubController {
 		this.clubService = clubService;
 	}
 	
-	// Club 등록
+	// Test를 위한 메서드
 	@PostMapping
+	public String registerTest(@RequestBody TravelClub travelClub) {
+		return clubService.registerClubTest(travelClub);
+	}
+	
+	
+	// Club 등록
 	// http://localhost:8090/club + Post 방식으로 오는 데이터에 대해서 처리
 	// Post 데이터는 body에 데이터를 추가해서 전달됨.
 	// 그런 body를 처리하기 위한 Annotation이 @ReqestBody임.
+	// @PostMapping
 	public String register(@RequestBody TravelClubCdo travelClubCdo) {
 		return clubService.registerClub(travelClubCdo);
 	}
