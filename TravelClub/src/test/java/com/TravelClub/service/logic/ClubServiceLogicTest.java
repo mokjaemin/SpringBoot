@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 public class ClubServiceLogicTest {
 
-	// TDD시에는 @RequiredArgsConstructor, 생성자로 의존성 주입 불가능
+	// @RequiredArgsConstructor, 생성자로 의존성 주입 불가능
 	// 사용시 주입안됨.
 	@Autowired
 	ClubService clubService;

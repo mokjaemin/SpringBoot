@@ -14,7 +14,7 @@ import com.TravelClub.store.ClubStore;
 
 
 
-@Repository("clubMapStore")
+//@Repository("clubMapStore")
 public class ClubMapStore implements ClubStore{
 	
 	private Map<String, TravelClub> clubMap;
