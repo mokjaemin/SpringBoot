@@ -41,8 +41,8 @@ public class ClubJpaStore implements ClubStore{
 
 	@Override
 	public List<TravelClub> retrieveByName(String name) {
-		// TODO Auto-generated method stub
-		return null;
+		List<TravelClubJpo> clubJpos = clubRepository.findAllByName(name);
+		return clubJpos.stream().map(TravelClubJpo::toDomain).collect(Collectors.toList());
 	}
 
 	@Override
@@ -54,20 +54,19 @@ public class ClubJpaStore implements ClubStore{
 
 	@Override
 	public void update(TravelClub club) {
-		// TODO Auto-generated method stub
+		clubRepository.save(new TravelClubJpo(club));
 		
 	}
 
 	@Override
 	public void delete(String clubId) {
-		// TODO Auto-generated method stub
+		clubRepository.deleteById(clubId);
 		
 	}
 
 	@Override
 	public boolean exists(String clubId) {
-		// TODO Auto-generated method stub
-		return false;
+		return clubRepository.existsById(clubId);	
 	}
 
 }
