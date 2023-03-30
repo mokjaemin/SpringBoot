@@ -1,0 +1,22 @@
+
+server:
+  port: 8090
+  
+#---
+#test:
+# str: test-str
+
+spring:
+ application:
+  name: configtest-dev # git에 있는 파일의 이름과 같음.
+ config:
+  import: optional:configserver:http://localhost:9900
+  
+
+# actuator 설정 - git내용 변경시 반영을 위함.
+# refresh Post 보내야함.
+management:
+ endpoints:
+  web:
+   exposure:
+    include: refresh
