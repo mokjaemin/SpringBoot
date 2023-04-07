@@ -1,6 +1,6 @@
 # FILES FOR STUDYING SPRING BOOT ONLY
 
-FOLDER
+FOLDER DESCRIPTION
 
 1. ConfigClient : TEST APPLICATION FOR MSA CLIENT
 - Acrator test with Git by becoming Cleint
